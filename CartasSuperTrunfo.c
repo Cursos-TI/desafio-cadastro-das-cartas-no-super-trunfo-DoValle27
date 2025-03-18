@@ -17,6 +17,10 @@ int main() {
     float pib2;
     int pontosTuristicos2;
 
+    printf("========================================\n");
+    printf("         CADASTRO DE CARTAS\n");
+    printf("========================================\n");
+
     printf("Digite a letra do estado (A-H) da primeira carta: ");
     scanf(" %c", &estado1);
     
@@ -60,8 +64,15 @@ int main() {
     printf("Digite o número de pontos turísticos da segunda cidade: ");
     scanf(" %d", &pontosTuristicos2);
     
-    printf("\n----------------------------\n");
-    printf("CARTA 1\n");
+    // Cálculos
+    float densidade1 = populacao1 / area1;
+    float densidade2 = populacao2 / area2;
+    float pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+    float pibPerCapita2 = (pib2 * 1000000000) / populacao2;
+    
+    printf("\n========================================\n");
+    printf("               CARTA 1\n");
+    printf("========================================\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Cidade: %s\n", cidade1);
@@ -69,8 +80,12 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões\n", pib1);
     printf("Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
     
-    printf("\nCARTA 2\n");
+    printf("\n========================================\n");
+    printf("               CARTA 2\n");
+    printf("========================================\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Cidade: %s\n", cidade2);
@@ -78,6 +93,10 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Pontos Turísticos: %d\n", pontosTuristicos2);
-    printf("----------------------------\n");
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+    
+    printf("========================================\n");
+    
     return 0;
 }
